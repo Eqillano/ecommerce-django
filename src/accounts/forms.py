@@ -4,11 +4,8 @@ from django.contrib.auth import get_user_model
 User = get_user_model()
 
 
-
-
 class GuestForm(forms.Form):
-    email = forms.EmailField()
-
+    email    = forms.EmailField()
 
 
 class LoginForm(forms.Form):
@@ -44,3 +41,4 @@ class RegisterForm(forms.Form):
         if password2 != password:
             raise forms.ValidationError("Passwords must match.")
         return data
+
